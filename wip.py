@@ -1,4 +1,5 @@
-#example
+# Example
+# Save as .py, chmod +x, run $[@]python3 script.py
 
 def main():
     print('Hello world')
