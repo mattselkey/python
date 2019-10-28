@@ -1,14 +1,16 @@
 # 
 # Example file for variables
 #
-
-# Declare a variable and initialize it
 f=0
 print(f)
 
-# # re-declaring the variable works
+# Declare a variable and initialize it
 f="abc"
 print(f)
+
+
+# # re-declaring the variable works
+print("this is a string" + 123)
 
 # # ERROR: variables of different types cannot be combined
 
