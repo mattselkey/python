@@ -24,3 +24,6 @@ def someFunction():
 
 someFunction()
 print(p)
+
+#del f
+#print(f)
