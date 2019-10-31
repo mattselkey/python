@@ -16,3 +16,8 @@ def func1():
 
 
 #function with variable number of arguments
+
+
+func1()
+print (func1())
+print (func1)
