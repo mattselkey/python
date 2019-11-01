@@ -4,7 +4,7 @@
 
 class myClass():
     def method1(self):
-        print("mcClass method1")
+        print("myClass method1")
 
     def method2(self, someString):
         print("myClass method2 " + someString)
@@ -12,7 +12,7 @@ class myClass():
 class anotherClass(myClass):
     def method1(self):
         myClass.method1(self)
-        print("anothClass method1")
+        print("anotherClass method1")
 
     def method2(self, someString):
         print("anotherClass method2 ")
