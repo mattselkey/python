@@ -21,10 +21,10 @@ def main():
   print ("Which is a " + days[today.weekday()])
   
 # ## DATETIME OBJECTS
-# # Get today's date from the datetime class
-# today = datetime.now()
-# print  ("The current date and time is ", today)
-# 
+  # Get today's date from the datetime class
+  today = datetime.now()
+  print  ("The current date and time is ", today)
+  
 # # Get the current time
 # t = datetime.time(datetime.now())
 # print ("The current time is ", t)
