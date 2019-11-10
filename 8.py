@@ -30,4 +30,4 @@ def main():
   print(now.strftime("Current time: %H:%M"))
 
 if __name__ == "__main__":
-  main();
+    main();
