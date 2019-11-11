@@ -4,7 +4,7 @@
 import os
 from os import path
 import shutil
-
+from shutil import make_archive
 
 def main():
   # make a duplicate of an existing file
@@ -18,13 +18,18 @@ def main():
     # copy over the permissions, modification times, and other info
     #shutil.copy(src, dst)
     #shutil.copystat(src, dst)
-    os.rename("textfile.txt", "newfile.txt")
+    #os.rename("textfile.txt", "newfile.txt")
 
 
     # rename the original file
 
+
+
     
     # now put things into a ZIP archive
+    root_dir, tail = path.split(src)
+    shutil.make_archive("archive", "zip", root_dir)
+
 
 
     # more fine-grained control over ZIP files
