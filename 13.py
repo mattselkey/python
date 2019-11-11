@@ -20,7 +20,7 @@ def main():
     #shutil.copy(src, dst)
     #shutil.copystat(src, dst)
 
-    
+
     # rename the original file
     #os.rename("textfile.txt", "newfile.txt")
         
@@ -30,7 +30,7 @@ def main():
 
     # more fine-grained control over ZIP files
     with ZipFile("testzip.zip","w") as newzip:
-      newzip.write("newfile.txt")
+      newzip.write("textfile.txt")
       newzip.write("textfile.txt.bak")
 
 
