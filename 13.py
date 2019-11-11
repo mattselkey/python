@@ -16,9 +16,10 @@ def main():
     dst = src + ".bak"
 
     # copy over the permissions, modification times, and other info
-    shutil.copy(src, dst)
-    shutil.copystat(src, dst)
-    
+    #shutil.copy(src, dst)
+    #shutil.copystat(src, dst)
+    os.rename("textfile.txt", "newfile.txt")
+
 
     # rename the original file
 
