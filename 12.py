@@ -1,7 +1,7 @@
 #
 # Example file for working with os.path module
 #
-import os
+import  os
 from os import path
 import datetime
 from datetime import date, time, timedelta
@@ -22,8 +22,10 @@ def main():
     print("item path and name: " + str(path.split(path.realpath("textfile.txt"))))
   
   # Get the modification time
+    t = time.ctime(path.getmtime("textfile.txt"))
+    print(t)
+    print(datetime.datetime.fromtimestamp(path.getmtime("textfile.txt")))
 
-  
   # Calculate how long ago the item was modified
 
 
