@@ -1,0 +1,43 @@
+# 
+# Example file for parsing and processing HTML
+#
+from html.parser import HTMLParser
+
+# create a subclass of HTMLParser and override the handler methods
+class MyHTMLParser(HTMLParser):
+  # function to handle an opening tag in the doc
+  # this will be called when the closing ">" of the tag is reached
+  def handle_starttag(self, tag, attrs):
+    global metacount
+    if tag == "meta":
+      metacount += 1
+
+    print ("Encountered a start tag:", tag)
+    pos = self.getpos() # returns a tuple indication line and character
+    print ("\tAt line: ", pos[0], " position ", pos[1])
+
+    if attrs.__len__() > 0:
+      print ("\tAttributes:")
+      for a in attrs:
+        print ("\t", a[0],"=",a[1])
+
+
+
+
+def main():
+  # instantiate the parser and feed it some HTML
+  # instantiate the parser and feed it some HTML
+  parser = MyHTMLParser()
+    
+  # open the sample HTML file and read it
+  f = open("samplehtml.html")
+  if f.mode == "r":
+    contents = f.read() # read the entire file
+    parser.feed(contents)
+  
+  print ("%d meta tags encountered" % metacount)
+    
+
+if __name__ == "__main__":
+  main();
+  
