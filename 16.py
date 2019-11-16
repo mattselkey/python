@@ -21,7 +21,11 @@ class MyHTMLParser(HTMLParser):
       for a in attrs:
         print ("\t", a[0],"=",a[1])
 
-
+  # function to handle the ending tag
+  def handle_endtag(self, tag):
+    print ("Encountered an end tag:", tag)
+    pos = self.getpos()
+    print ("\tAt line: ", pos[0], " position ", pos[1])
 
 
 def main():
